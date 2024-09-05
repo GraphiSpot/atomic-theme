@@ -1,0 +1,22 @@
+{%- set alignment       = module.styles.alignment -%}
+{%- set content_color   = module.styles.content_settings.content_color -%}
+{%- set content_size    = module.styles.content_settings.font_size -%}
+
+{# CSS files #}
+{{ require_css(get_asset_url("../css/modules/headline-text.css")) }}
+
+{# Module layout #}
+<article class="headline-text-wrapper text-{{ alignment.mobile }} text-md-{{ alignment.tablet }} text-lg-{{ alignment.desktop }}">
+    <header class="headline">
+        {% unless module.headline == "" %}
+            <{{ headline_size }} class="{{ headline_style }} color-{{ headline_color }}">
+                {{ headline }}
+            </{{ headline_size }}>
+        {% endunless %}
+        {% unless module.content == "" %}
+            <div class="headline-text-content color-{{ content_color }}">
+                {{ module.text }}
+                </div>
+        {% endunless %}
+    </header>
+</article>
