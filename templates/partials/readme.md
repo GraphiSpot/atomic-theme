@@ -1,0 +1,1 @@
+This is the folder where you put your global partials like header-nav.html, header-no-nav.html ... into

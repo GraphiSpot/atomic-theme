@@ -1,0 +1,50 @@
+<!--
+    templateType: page
+    label: Page template
+    isAvailableForNewContent: false
+-->
+<!doctype html>
+<html lang="{{ html_lang }}" {{ html_lang_dir }}>
+  <head>
+    <meta charset="utf-8">
+    {% if page_meta.html_title %}
+      <title>{{ page_meta.html_title }}</title>
+    {% endif %}
+    {% if branding_favicon %}
+      <link rel="shortcut icon" href="{{ branding_favicon }}" />
+    {% endif %}
+    <meta name="description" content="{{ page_meta.meta_description }}">
+    <link rel="preload" href="{{ (get_asset_url("../../css/main.css")) }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{ (get_asset_url("../../css/main.css")) }}"></noscript>
+    <link rel="preload" href="{{ (get_asset_url("../../css/theme.css")) }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{ (get_asset_url("../../css/theme.css")) }}"></noscript>
+    {% if template_css %}
+        {{ require_css(get_asset_url(template_css), {async: true}) }}
+    {% endif %}
+    {# Preconnect #}
+    <link rel="preconnect" href="https://f.hubspotusercontent-eu1.net/" />
+    <link rel="preconnect" href="https://f.hubspotusercontent-eu1.net/" crossorigin />
+    <link rel="preconnect" href="https://{{ hub_id }}.fs1.hubspotusercontent-eu1.net/" />
+    <link rel="preconnect" href="https://{{ hub_id }}.fs1.hubspotusercontent-eu1.net/" crossorigin />
+    {{ standard_header_includes }}
+    
+  </head>
+  <body>
+    {% block header %}
+        {% global_partial path="../partials/lp_header.html" %}
+    {% endblock header %}
+
+    {% block body %}
+      
+    {% endblock body %}
+    
+    {% block footer %}
+        {% global_partial path="../partials/legal-footer.html" %}
+    {% endblock footer %}
+    
+    {{ require_js(get_asset_url("../../js/theme.js")) }}
+    
+    {{ standard_footer_includes }}
+    
+  </body>
+</html>

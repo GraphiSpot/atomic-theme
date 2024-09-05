@@ -1,0 +1,11 @@
+<!--
+    templateType: page
+    label: Landing page template
+    isAvailableForNewContent: true
+-->
+{% extends "../layouts/base.html" %}
+
+{% block body %}
+    {% dnd_area 'main' label="Main drag&drop"%}
+    {% end_dnd_area %}
+{% endblock body %}

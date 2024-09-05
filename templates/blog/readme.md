@@ -1,0 +1,3 @@
+Put your blog templates here
+
+Pro tip: create subfolders if you have several blog templates like "blog-template-with-cards.html", "blog-template-list.html" ...
