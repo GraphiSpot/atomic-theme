@@ -1,0 +1,95 @@
+{% from "./../../_macros/headlines.html" import animated_headline%}
+
+{%- set alignment       = module.styles.alignment -%}
+{%- set content_color   = module.styles.content_settings.content_color -%}
+{%- set content_size    = module.styles.content_settings.font_size -%}
+{%- unless content_size == "" -%}
+    {% set content_size_class = " font-" ~ content_size %}
+{%- endunless -%}
+
+{# Animation settings #}
+{%- set aos = theme.modules.cards.general_settings.enable_animations -%}
+    {%- if aos -%}
+        {{ require_js(get_asset_url("../../js/aos.js")) }}
+        {% require_js %}
+            <script>
+                AOS.init()
+            </script>
+        {% end_require_js %}
+        {{ require_css(get_asset_url("../../css/global/_aos.css")) }}
+        
+        {%- if module.styles.animated_element == "headline" -%}
+            {%- set headline_animation_settings = {} -%}
+            {%- do headline_animation_settings.update({
+                "data-aos": module.styles.headline_settings.animation_settings.effect,
+                "data-aos-duration": module.styles.headline_settings.animation_settings.duration,
+                "data-aos-delay": module.styles.headline_settings.animation_settings.delay,
+                "data-aos-easing": module.styles.headline_settings.animation_settings.easing,
+                "data-aos-mirror": module.styles.headline_settings.animation_settings.mirror,
+                "data-aos-once": "false"
+            })
+            -%}
+        {%- elif module.styles.animated_element == "text" -%}
+            {%- set content_animation_settings = {} -%}
+            {%- do content_animation_settings.update({
+                "data-aos": module.styles.content_settings.animation_settings.effect,
+                "data-aos-duration": module.styles.content_settings.animation_settings.duration,
+                "data-aos-delay": module.styles.content_settings.animation_settings.delay,
+                "data-aos-easing": module.styles.content_settings.animation_settings.easing,
+                "data-aos-mirror": module.styles.content_settings.animation_settings.mirror,
+                "data-aos-once": "false"
+            })
+            -%}
+        {%- elif module.styles.animated_element == "both" -%}
+            {%- set headline_animation_settings = {} -%}
+            {%- do headline_animation_settings.update({
+                "data-aos": module.styles.headline_settings.animation_settings.effect,
+                "data-aos-duration": module.styles.headline_settings.animation_settings.duration,
+                "data-aos-delay": module.styles.headline_settings.animation_settings.delay,
+                "data-aos-easing": module.styles.headline_settings.animation_settings.easing,
+                "data-aos-mirror": module.styles.headline_settings.animation_settings.mirror,
+                "data-aos-once": "false"
+            })
+            -%}
+
+            {%- set content_animation_settings = {} -%}
+            {%- do content_animation_settings.update({
+                "data-aos": module.styles.content_settings.animation_settings.effect,
+                "data-aos-duration": module.styles.content_settings.animation_settings.duration,
+                "data-aos-delay": module.styles.content_settings.animation_settings.delay,
+                "data-aos-easing": module.styles.content_settings.animation_settings.easing,
+                "data-aos-mirror": module.styles.content_settings.animation_settings.mirror,
+                "data-aos-once": "false"
+            })
+            -%}
+        {% else %}
+        {%- endif -%}
+    {%- endif -%}
+
+{# CSS files #}
+{{ require_css(get_asset_url("../../css/modules/headline-text.css")) }}
+{%- unless module.advanced.custom_class == null -%}
+    {{ require_css(get_asset_url("../../css/custom_css/custom_headline-text.css")) }}
+{%- endunless -%}
+
+{# Module layout #}
+<article class="headline-text-wrapper text-{{ alignment.mobile }} text-md-{{ alignment.tablet }} text-lg-{{ alignment.desktop }}">
+    <header>
+        {% unless module.headline == "" %}
+            {{ animated_headline(
+            module.advanced.custom_class, 
+            module.headline, 
+            module.headline_size, 
+            module.headline_style, 
+            module.styles.headline_settings.headline_color,
+            module.add_to_dots,
+            headline_animation_settings|cut('{')|cut('}')|cut(',')
+            )}}
+        {% endunless %}
+        {% unless module.content == "" %}
+            <div class="headline-text-content color-{{ content_color }}" {{ content_animation_settings|cut('{')|cut('}')|cut(',') }}>
+                {{ module.content }}
+                </div>
+        {% endunless %}
+    </header>
+</article>

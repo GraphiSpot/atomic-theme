@@ -1,0 +1,15 @@
+{
+	"label": "Headline-Text",
+	"icon": "../img/module-icons/headline-text.svg",
+	"css_assets": [],
+	"external_js": [],
+	"global": false,
+	"help_text": "",
+	"host_template_types": ["PAGE", "BLOG_POST", "BLOG_LISTING"],
+	"js_assets": [],
+	"other_assets": [],
+	"categories": ["text"],
+	"smart_type": "NOT_SMART",
+	"tags": ["text", "rich_text"],
+	"is_available_for_new_content": true
+}
