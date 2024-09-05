@@ -1,0 +1,303 @@
+[
+	{
+		"name": "colors",
+		"label": "Colors",
+		"required": false,
+		"locked": false,
+		"children": [
+			{
+				"name": "primary",
+				"label": "Primary color",
+				"required": false,
+				"locked": false,
+				"inline_help_text": "",
+				"help_text": "",
+				"type": "color",
+				"inherited_value": {
+					"property_value_paths": {
+						"color": "brand_settings.primaryColor"
+					}
+				},
+				"visibility": {
+					"hidden_subfields": {
+						"opacity": true
+					}
+				},
+				"default": {
+					"color": "#1A67F8"
+				}
+			},
+			{
+				"name": "secondary",
+				"label": "Secondary color",
+				"required": false,
+				"locked": false,
+				"inline_help_text": "",
+				"help_text": "",
+				"type": "color",
+				"inherited_value": {
+					"property_value_paths": {
+						"color": "brand_settings.secondaryColor"
+					}
+				},
+				"visibility": {
+					"hidden_subfields": {
+						"opacity": true
+					}
+				},
+				"default": {
+					"color": "#121f33"
+				}
+			},
+			{
+				"name": "accents",
+				"label": "Accent colors",
+				"required": false,
+				"locked": false,
+				"children": [
+					{
+						"name": "light_primary",
+						"label": "Light primary",
+						"required": false,
+						"locked": false,
+						"inline_help_text": "",
+						"help_text": "",
+						"type": "color",
+						"inherited_value": {
+							"property_value_paths": {
+								"color": "brand_settings.accentColor1"
+							}
+						},
+						"visibility": {
+							"hidden_subfields": {
+								"opacity": true
+							}
+						},
+						"default": {
+							"color": "#f3f4d0",
+							"opacity": 100
+						}
+					},
+					{
+						"name": "light_secondary",
+						"label": "Light secondary color",
+						"required": false,
+						"locked": false,
+						"inline_help_text": "",
+						"help_text": "",
+						"type": "color",
+						"inherited_value": {
+							"property_value_paths": {
+								"color": "brand_settings.accentColor2"
+							}
+						},
+						"visibility": {
+							"hidden_subfields": {
+								"opacity": true
+							}
+						},
+						"default": {
+							"color": "#dff1f5",
+							"opacity": 100
+						}
+					},
+					{
+						"name": "light_grey",
+						"label": "Light grey color",
+						"required": false,
+						"locked": false,
+						"inline_help_text": "",
+						"help_text": "",
+						"type": "color",
+						"inherited_value": {
+							"property_value_paths": {
+								"color": "brand_settings.accentColor3"
+							}
+						},
+						"visibility": {
+							"hidden_subfields": {
+								"opacity": true
+							}
+						},
+						"default": {
+							"color": "#e9ebee",
+							"opacity": 100
+						}
+					}
+				],
+				"type": "group",
+				"inline_help_text": "",
+				"help_text": "",
+				"default": {}
+			},
+			{
+				"name": "system",
+				"label": "System colors",
+				"required": false,
+				"locked": false,
+				"children": [
+					{
+						"name": "info",
+						"label": "Info color",
+						"required": false,
+						"locked": false,
+						"inline_help_text": "",
+						"help_text": "",
+						"type": "color",
+						"visibility": {
+							"hidden_subfields": {
+								"opacity": true
+							}
+						},
+						"default": {
+							"color": "#03daff"
+						}
+					},
+					{
+						"name": "warning",
+						"label": "Warning color",
+						"required": false,
+						"locked": false,
+						"inline_help_text": "",
+						"help_text": "",
+						"type": "color",
+						"visibility": {
+							"hidden_subfields": {
+								"opacity": true
+							}
+						},
+						"default": {
+							"color": "#ffa003"
+						}
+					},
+					{
+						"name": "success",
+						"label": "Success color",
+						"required": false,
+						"locked": false,
+						"inline_help_text": "",
+						"help_text": "",
+						"type": "color",
+						"visibility": {
+							"hidden_subfields": {
+								"opacity": true
+							}
+						},
+						"default": {
+							"color": "#17cc34"
+						}
+					},
+					{
+						"name": "error",
+						"label": "Error color",
+						"required": false,
+						"locked": false,
+						"inline_help_text": "",
+						"help_text": "Used as form error color",
+						"type": "color",
+						"visibility": {
+							"hidden_subfields": {
+								"opacity": true
+							}
+						},
+						"default": {
+							"color": "#ff4128"
+						}
+					},
+					{
+						"name": "disabled",
+						"label": "Disabled color",
+						"required": false,
+						"locked": false,
+						"inline_help_text": "",
+						"help_text": "Used for forms when a field is disabled",
+						"type": "color",
+						"visibility": {
+							"hidden_subfields": {
+								"opacity": true
+							}
+						},
+						"default": {
+							"color": "#bbbdbe"
+						}
+					}
+				],
+				"type": "group",
+				"inline_help_text": "",
+				"help_text": "",
+				"default": {}
+			}
+		],
+		"type": "group",
+		"inline_help_text": "",
+		"help_text": "",
+		"default": {}
+	},
+	{
+		"name": "advanced",
+		"label": "Advanced settings",
+		"required": false,
+		"locked": false,
+		"children": [
+			{
+				"name": "container_width",
+				"label": "Container width",
+				"required": false,
+				"locked": false,
+				"display": "slider",
+				"step": 1,
+				"type": "number",
+				"min": 900,
+				"max": 1600,
+				"inline_help_text": "",
+				"help_text": "Set the width of your content in pixels",
+				"default": 1440
+			},
+			{
+				"name": "col_gutter",
+				"label": "Gutter",
+				"required": false,
+				"locked": false,
+				"display": "slider",
+				"step": 1,
+				"suffix": "px",
+				"type": "number",
+				"min": 16,
+				"max": 64,
+				"inline_help_text": "Defines horizontal spacing <strong>between</strong> columns",
+				"help_text": "",
+				"default": 32
+			},
+			{
+				"name": "row_spacing",
+				"label": "Row spacing",
+				"required": false,
+				"locked": false,
+				"type": "spacing",
+				"inline_help_text": "Definies vertical spacing <strong>between</strong> rows. Left & Right do not affect styling",
+				"help_text": "",
+				"visibility": {
+					"hidden_subfields": {
+						"margin": true
+					}
+				},
+				"default": {
+					"padding": {
+						"top": {
+							"value": 5,
+							"units": "rem"
+						},
+						"bottom": {
+							"value": 5,
+							"units": "rem"
+						}
+					}
+				}
+			}
+		],
+		"type": "group",
+		"inline_help_text": "",
+		"help_text": "",
+		"default": {}
+	}
+]

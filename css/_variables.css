@@ -1,0 +1,26 @@
+{# This file is for manage all variables of the theme #}
+
+{# Pro tip #1: Adding a dash "-" to statements will truncate whitespace in compiled code. This is optional for this file since it contains only variables #}
+
+{# Pro tip #2: Create arrays where applicable to further optimize your future code #}
+
+{# Colors #}
+{%- set colors = {
+    "primary"           : theme.colors.primary,
+    "secondary"         : theme.colors.secondary,
+    "light-primary"     : theme.colors.accents.light_primary,
+    "light-secondary"   : theme.colors.accents.light_secondary,
+    "light-grey"        : theme.colors.accents.light_grey,
+    "info"              : theme.color.system.info,
+    "warning"           : theme.color.system.warning,
+    "success"           : theme.color.system.success,
+    "error"             : theme.color.system.error,
+    "disabled"          : theme.color.system.disabled
+}
+-%}
+
+{# Advanced #}
+{%- set gutter                  = theme.advanced.col_gutter -%}
+{%- set row_spacing_top         = theme.advanced.row_spacing.padding.top.value ~ advanced.row_spacing.padding.top.units -%}
+{%- set row_spacing_bottom      = theme.advanced.row_spacing.padding.bottom.value ~ advanced.row_spacing.padding.bottom.units -%}
+{%- set container_width         = theme.advanced.container_width ~ "px" -%}
