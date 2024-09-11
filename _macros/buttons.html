@@ -1,0 +1,29 @@
+<!--
+  templateType: "none"
+  isAvailableForNewContent: false
+-->
+
+{% import "../../../_macros/icons.html" %} 
+{% import "../../../_macros/accessibility.html" %}
+{# ^ You might need to modify those paths from the module structure perspective since you're loading this macro in a module #}
+
+{% macro button_macro_1 (icon_name, icon_position, icon_size, label, aria_label, link, new_tab, rel, class) %}
+<a href="{{ link }}" class="{{ class }} button" {% if new_tab %}target="_blank"{% endif %}{% if rel %} rel="{{ rel }}"{% endif %}>
+    {% unless icon_name == "" %}
+        {% if icon_position == "left" %}
+            {{ btn_icon(icon_name, icon_size, icon_position) }}
+            <span class="btn-label">{{ label }}
+                {{ sr_label(aria_label) }}
+            </span>
+        {% elif icon_position == "right" %}
+            <span class="btn-label">{{ label }}
+                {{ sr_label(aria_label) }}
+            </span>
+            {{ btn_icon(icon_name, icon_size, icon_position) }}
+        {% endif %}
+    {% else %}
+        {{ label }}
+        {{ sr_label(aria_label) }}
+    {% endunless %}
+</a>
+{% endmacro %}

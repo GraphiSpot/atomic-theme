@@ -1,0 +1,1 @@
+Put you system page templates like preference-center, unsubscribe, search result... here

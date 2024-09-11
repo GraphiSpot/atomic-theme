@@ -4,7 +4,34 @@
 
 {# Pro tip #2: Create arrays where applicable to further optimize your future code #}
 
-{# Colors #}
+{# Table of Content 
+#   1. General Variables 
+#   2. Colors
+#   3. Typography
+#   4. Buttons
+#   4.1 Primary Button
+#   4.2 Secondary Button
+#   5. Forms
+#   5.1 General settings
+#   5.2 Inputs
+#   6. Modules
+#   6.1 Cards
+#   7. Advanced 
+#}
+
+{# 1. General Variables #}
+{%- set breakpoints = {
+    "":"", 
+    "sm":"480",  
+    "md":"768", 
+    "lg":"1024",
+    "big":"1400"
+} 
+-%}
+
+{%- set sides = ["left", "center", "right"] -%}
+
+{# 2. Colors #}
 {%- set colors = {
     "primary"           : theme.colors.primary,
     "secondary"         : theme.colors.secondary,
@@ -19,8 +46,133 @@
 }
 -%}
 
-{# Advanced #}
+{# 3. Typography #}
+{%- set base_font_size          = theme.fonts.base_font_size ~ "px" -%}
+{%- set base_line_height        = theme.fonts.base_line_height ~ "%" -%}
+{%- set headline_font           = theme.fonts.headlines.font -%}
+{%- set body_font               = theme.fonts.text.font -%}
+
+{%- set desktop_font_sizes = {
+    "h1" : theme.fonts.desktop.h1,
+    "h2" : theme.fonts.desktop.h2,
+    "h3" : theme.fonts.desktop.h3,
+    "h4" : theme.fonts.desktop.h4,
+    "h5" : theme.fonts.desktop.h5,
+    "h6" : theme.fonts.desktop.h6
+}
+-%}
+
+{%- set tablet_font_sizes = {
+    "h1" : theme.fonts.tablet.h1,
+    "h2" : theme.fonts.tablet.h2,
+    "h3" : theme.fonts.tablet.h3,
+    "h4" : theme.fonts.tablet.h4,
+    "h5" : theme.fonts.tablet.h5,
+    "h6" : theme.fonts.tablet.h6
+}
+-%}
+
+{%- set mobile_font_sizes = {
+    "h1" : theme.fonts.mobile.h1,
+    "h2" : theme.fonts.mobile.h2,
+    "h3" : theme.fonts.mobile.h3,
+    "h4" : theme.fonts.mobile.h4,
+    "h5" : theme.fonts.mobile.h5,
+    "h6" : theme.fonts.mobile.h6
+}
+-%} 
+
+{%- set link_style = {
+    "transition"        : theme.fonts.styles.link.transition ~ "s",
+    "text_transform"    : theme.fonts.styles.link.text_transform,
+    "def_color"         : theme.fonts.styles.link.default.link_color.css,
+    "hov_color"         : theme.fonts.styles.link.hover.link_color.css,
+    "foc_color"         : theme.fonts.styles.link.focus.link_color.css,
+    "line_thickness"    : theme.fonts.styles.link.underline_thickness ~ "px",
+    "light_line_color"  : theme.fonts.styles.link.light_underline_color.css,
+    "dark_line_color"   : theme.fonts.styles.link.light_underline_color.css
+}
+-%}
+{# 4. Buttons #}
+{%- set button_defaults = {
+    "btn_radius"        : theme.buttons.general_settings.radius ~ 'px',
+    "btn_transition"    : theme.buttons.general_settings.transition ~ 's',
+    "btn_padding_norm"  : theme.buttons.general_settings.padding.css,
+}
+-%}
+
+{# 4.1 Primary button #}
+{%- set primary_button = {
+    "def_bg"        :   theme.buttons.primary.default.background_color.css,
+    "def_color"     :   theme.buttons.primary.default.text_color.css,
+    "def_border"    :   theme.buttons.primary.default.border.css,
+    "def_text"      :   theme.buttons.primary.default.text_transform,
+
+    "hov_bg"        :   theme.buttons.primary.hover.background_color.css,
+    "hov_color"     :   theme.buttons.primary.hover.text_color.css,
+    "hov_border"    :   theme.buttons.primary.hover.border.css,
+    "hov_text"      :   theme.buttons.primary.hover.text_transform,
+
+    "foc_bg"        :   theme.buttons.primary.focus.background_color.css,
+    "foc_color"     :   theme.buttons.primary.focus.text_color.css,
+    "foc_border"    :   theme.buttons.primary.focus.border.css,
+    "foc_text"      :   theme.buttons.primary.focus.text_transform,
+
+    "dis_bg"        :   theme.buttons.primary.disabled.background_color.css,
+    "dis_color"     :   theme.buttons.primary.disabled.text_color.css,
+    "dis_border"    :   theme.buttons.primary.disabled.border.css,
+    "dis_text"      :   theme.buttons.primary.disabled.text_transform
+}
+-%}
+
+{# 4.2 Secondary button#}
+{%- set secondary_button = {
+    "def_bg"        :   theme.buttons.secondary.default.background_color.css,
+    "def_color"     :   theme.buttons.secondary.default.text_color.css,
+    "def_border"    :   theme.buttons.secondary.default.border.css,
+    "def_text"      :   theme.buttons.secondary.default.text_transform,
+
+    "hov_bg"        :   theme.buttons.secondary.hover.background_color.css,
+    "hov_color"     :   theme.buttons.secondary.hover.text_color.css,
+    "hov_border"    :   theme.buttons.secondary.hover.border.css,
+    "hov_text"      :   theme.buttons.secondary.hover.text_transform,
+
+    "foc_bg"        :   theme.buttons.secondary.focus.background_color.css,
+    "foc_color"     :   theme.buttons.secondary.focus.text_color.css,
+    "foc_border"    :   theme.buttons.secondary.focus.border.css,
+    "foc_text"      :   theme.buttons.secondary.focus.text_transform,
+
+    "dis_bg"        :   theme.buttons.secondary.disabled.background_color.css,
+    "dis_color"     :   theme.buttons.secondary.disabled.text_color.css,
+    "dis_border"    :   theme.buttons.secondary.disabled.border.css,
+    "dis_text"      :   theme.buttons.secondary.disabled.text_transform
+}
+-%}
+
+{# 5. Forms #}
+{# 5.1 General settings #}
+{%- set form_generals = {
+    "transition"    : theme.forms.general_settings.transition 
+}
+-%}
+
+{# 5.2 Inputs #} 
+{%- set input_defaults = {
+    "padding"       : theme.forms.inputs.padding.css,
+    "label_size"    : theme.forms.inputs.label_size ~ "rem",
+    "input_size"    : theme.forms.inputs.input_size ~ "rem"
+}
+-%}
+
+{# 6. Modules #}
+{# 6.1 Cards #}
+{%- set card_defaults    = {
+    "radius"        :   theme.modules.cards.border-radius
+}-%}
+
+{# 7. Advanced #}
 {%- set gutter                  = theme.advanced.col_gutter -%}
 {%- set row_spacing_top         = theme.advanced.row_spacing.padding.top.value ~ advanced.row_spacing.padding.top.units -%}
 {%- set row_spacing_bottom      = theme.advanced.row_spacing.padding.bottom.value ~ advanced.row_spacing.padding.bottom.units -%}
 {%- set container_width         = theme.advanced.container_width ~ "px" -%}
+{%- set icon_style              = theme.advanced.icon_style -%}

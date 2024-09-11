@@ -1,0 +1,10 @@
+<!--
+templateType: "none"
+isAvailableForNewContent: false
+-->
+
+{# A simple screen-reader macro for better accessibility #}
+
+{% macro sr_label(label) %}
+    <span class="sr-only">{{ label }}</span>
+{% endmacro %}

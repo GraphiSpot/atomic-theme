@@ -234,6 +234,1159 @@
 		"default": {}
 	},
 	{
+		"name": "fonts",
+		"label": "Fonts",
+		"required": false,
+		"locked": false,
+		"children": [
+			{
+				"name": "base_font_size",
+				"label": "Number field",
+				"required": false,
+				"locked": false,
+				"display": "text",
+				"step": 1,
+				"type": "number",
+				"min": null,
+				"suffix": "px",
+				"max": null,
+				"inline_help_text": "",
+				"help_text": "",
+				"default": 16
+			},
+			{
+				"name": "line_height",
+				"label": "Line height",
+				"required": false,
+				"locked": false,
+				"display": "slider",
+				"step": 0.05,
+				"suffix": "%",
+				"type": "number",
+				"min": 110,
+				"max": 220,
+				"inline_help_text": "",
+				"help_text": "Defines the line height. A good line-height is between 120 and 150.",
+				"default": 135
+			},
+			{
+				"name": "headlines",
+				"label": "Headlines",
+				"required": false,
+				"locked": false,
+				"inline_help_text": "",
+				"help_text": "",
+				"load_external_fonts": true,
+				"type": "font",
+				"visibility": {
+					"hidden_subfields": {
+						"size": true,
+						"color": true,
+						"underline": true
+					}
+				},
+				"default": {
+					"size": 12,
+					"font": "Lato",
+					"font_set": "GOOGLE"
+				}
+			},
+			{
+				"name": "text",
+				"label": "Text",
+				"required": false,
+				"locked": false,
+				"inline_help_text": "",
+				"help_text": "",
+				"load_external_fonts": true,
+				"type": "font",
+				"visibility": {
+					"hidden_subfields": {
+						"size": true,
+						"color": true,
+						"underline": true
+					}
+				},
+				"default": {
+					"font": "Lato",
+					"font_set": "GOOGLE"
+				}
+			},
+			{
+				"name": "desktop",
+				"label": "Desktop font sizes",
+				"required": false,
+				"locked": false,
+				"children": [
+					{
+						"name": "h1",
+						"label": "H1",
+						"required": false,
+						"locked": false,
+						"display": "text",
+						"step": 0.25,
+						"type": "number",
+						"min": 2,
+						"max": 10,
+						"suffix": "rem",
+						"inline_help_text": "",
+						"help_text": "",
+						"default": 4
+					},
+					{
+						"name": "h2",
+						"label": "H2",
+						"required": false,
+						"locked": false,
+						"display": "text",
+						"step": 0.25,
+						"type": "number",
+						"min": 2,
+						"max": 10,
+						"suffix": "rem",
+						"inline_help_text": "",
+						"help_text": "",
+						"default": 3
+					},
+					{
+						"name": "h3",
+						"label": "H3",
+						"required": false,
+						"locked": false,
+						"display": "text",
+						"step": 0.25,
+						"type": "number",
+						"min": 2,
+						"max": 10,
+						"suffix": "rem",
+						"inline_help_text": "",
+						"help_text": "",
+						"default": 2.5
+					},
+					{
+						"name": "h4",
+						"label": "H4",
+						"required": false,
+						"locked": false,
+						"display": "text",
+						"step": 0.25,
+						"type": "number",
+						"min": 1,
+						"max": 10,
+						"suffix": "rem",
+						"inline_help_text": "",
+						"help_text": "",
+						"default": 1.75
+					},
+					{
+						"name": "h5",
+						"label": "H5",
+						"required": false,
+						"locked": false,
+						"display": "text",
+						"step": 0.25,
+						"type": "number",
+						"min": 1,
+						"max": 10,
+						"suffix": "rem",
+						"inline_help_text": "",
+						"help_text": "",
+						"default": 1.25
+					},
+					{
+						"name": "h6",
+						"label": "H6",
+						"required": false,
+						"locked": false,
+						"display": "text",
+						"step": 0.25,
+						"type": "number",
+						"min": 1,
+						"max": 10,
+						"suffix": "rem",
+						"inline_help_text": "",
+						"help_text": "",
+						"default": 1.25
+					}
+				],
+				"type": "group",
+				"inline_help_text": "Font sizes are in rem. 1rem equals base font size. Example: If your base font size is 16, 2rem would be 32px",
+				"help_text": "",
+				"default": {}
+			},
+			{
+				"name": "tablet",
+				"label": "Tablet font sizes",
+				"required": false,
+				"locked": false,
+				"children": [
+					{
+						"name": "h1",
+						"label": "H1",
+						"required": false,
+						"locked": false,
+						"display": "text",
+						"step": 0.25,
+						"type": "number",
+						"min": 2,
+						"max": 10,
+						"suffix": "rem",
+						"inline_help_text": "",
+						"help_text": "",
+						"default": 4
+					},
+					{
+						"name": "h2",
+						"label": "H2",
+						"required": false,
+						"locked": false,
+						"display": "text",
+						"step": 0.25,
+						"type": "number",
+						"min": 2,
+						"max": 10,
+						"suffix": "rem",
+						"inline_help_text": "",
+						"help_text": "",
+						"default": 3
+					},
+					{
+						"name": "h3",
+						"label": "H3",
+						"required": false,
+						"locked": false,
+						"display": "text",
+						"step": 0.25,
+						"type": "number",
+						"min": 2,
+						"max": 10,
+						"suffix": "rem",
+						"inline_help_text": "",
+						"help_text": "",
+						"default": 2.5
+					},
+					{
+						"name": "h4",
+						"label": "H4",
+						"required": false,
+						"locked": false,
+						"display": "text",
+						"step": 0.25,
+						"type": "number",
+						"min": 1,
+						"max": 10,
+						"suffix": "rem",
+						"inline_help_text": "",
+						"help_text": "",
+						"default": 1.75
+					},
+					{
+						"name": "h5",
+						"label": "H5",
+						"required": false,
+						"locked": false,
+						"display": "text",
+						"step": 0.25,
+						"type": "number",
+						"min": 1,
+						"max": 10,
+						"suffix": "rem",
+						"inline_help_text": "",
+						"help_text": "",
+						"default": 1.25
+					},
+					{
+						"name": "h6",
+						"label": "H6",
+						"required": false,
+						"locked": false,
+						"display": "text",
+						"step": 0.25,
+						"type": "number",
+						"min": 1,
+						"max": 10,
+						"suffix": "rem",
+						"inline_help_text": "",
+						"help_text": "",
+						"default": 1.25
+					}
+				],
+				"type": "group",
+				"inline_help_text": "Font sizes are in rem. 1rem equals base font size. Example: If your base font size is 16, 2rem would be 32px",
+				"help_text": "",
+				"default": {}
+			},
+			{
+				"name": "mobile",
+				"label": "Mobile font sizes",
+				"required": false,
+				"locked": false,
+				"children": [
+					{
+						"name": "h1",
+						"label": "H1",
+						"required": false,
+						"locked": false,
+						"display": "text",
+						"step": 0.25,
+						"type": "number",
+						"min": 2,
+						"max": 10,
+						"suffix": "rem",
+						"inline_help_text": "",
+						"help_text": "",
+						"default": 4
+					},
+					{
+						"name": "h2",
+						"label": "H2",
+						"required": false,
+						"locked": false,
+						"display": "text",
+						"step": 0.25,
+						"type": "number",
+						"min": 2,
+						"max": 10,
+						"suffix": "rem",
+						"inline_help_text": "",
+						"help_text": "",
+						"default": 3
+					},
+					{
+						"name": "h3",
+						"label": "H3",
+						"required": false,
+						"locked": false,
+						"display": "text",
+						"step": 0.25,
+						"type": "number",
+						"min": 2,
+						"max": 10,
+						"suffix": "rem",
+						"inline_help_text": "",
+						"help_text": "",
+						"default": 2.5
+					},
+					{
+						"name": "h4",
+						"label": "H4",
+						"required": false,
+						"locked": false,
+						"display": "text",
+						"step": 0.25,
+						"type": "number",
+						"min": 1,
+						"max": 10,
+						"suffix": "rem",
+						"inline_help_text": "",
+						"help_text": "",
+						"default": 1.75
+					},
+					{
+						"name": "h5",
+						"label": "H5",
+						"required": false,
+						"locked": false,
+						"display": "text",
+						"step": 0.25,
+						"type": "number",
+						"min": 1,
+						"max": 10,
+						"suffix": "rem",
+						"inline_help_text": "",
+						"help_text": "",
+						"default": 1.25
+					},
+					{
+						"name": "h6",
+						"label": "H6",
+						"required": false,
+						"locked": false,
+						"display": "text",
+						"step": 0.25,
+						"type": "number",
+						"min": 1,
+						"max": 10,
+						"suffix": "rem",
+						"inline_help_text": "",
+						"help_text": "",
+						"default": 1.25
+					}
+				],
+				"type": "group",
+				"inline_help_text": "Font sizes are in rem. 1rem equals base font size. Example: If your base font size is 16, 2rem would be 32px",
+				"help_text": "",
+				"default": {}
+			},
+			{
+				"name": "styles",
+				"label": "Text styles",
+				"required": false,
+				"locked": false,
+				"children": [
+					{
+						"name": "light_text",
+						"label": "Light text color",
+						"required": false,
+						"locked": false,
+						"inline_help_text": "",
+						"help_text": "",
+						"type": "color",
+						"inherited_value": {
+							"property_value_paths": {
+								"color": "theme.colors.common.light.color"
+							}
+						},
+						"default": {
+							"color": "#ebedef",
+							"opacity": 100
+						}
+					},
+					{
+						"name": "dark_text",
+						"label": "Dark text color",
+						"required": false,
+						"locked": false,
+						"inline_help_text": "",
+						"help_text": "",
+						"type": "color",
+						"inherited_value": {
+							"property_value_paths": {
+								"color": "theme.colors.common.dark.color"
+							}
+						},
+						"default": {
+							"color": "#001d3d",
+							"opacity": 100
+						}
+					},
+					{
+						"name": "link",
+						"label": "Link style",
+						"required": false,
+						"locked": false,
+						"children": [
+							{
+								"name": "transition",
+								"label": "Transition",
+								"required": false,
+								"locked": false,
+								"display": "slider",
+								"step": 0.01,
+								"type": "number",
+								"min": 0,
+								"max": 0.4,
+								"inline_help_text": "",
+								"help_text": "",
+								"default": 0.26
+							},
+							{
+								"name": "text_transform",
+								"label": "Text transform",
+								"required": false,
+								"locked": false,
+								"display": "radio",
+								"inline_help_text": "",
+								"help_text": "",
+								"choices": [
+									["", "No transform"],
+									["lowercase", "Lowercase"],
+									["uppercase", "Uppercase"]
+								],
+								"type": "choice",
+								"placeholder": "",
+								"default": ""
+							},
+							{
+								"name": "default",
+								"label": "Default",
+								"required": false,
+								"locked": false,
+								"children": [
+									{
+										"name": "link_color",
+										"label": "Link color",
+										"required": false,
+										"locked": false,
+										"inline_help_text": "",
+										"help_text": "",
+										"type": "color",
+										"inherited_value": {
+											"property_value_paths": {
+												"color": "theme.colors.primary.color"
+											}
+										},
+										"default": {
+											"color": "#ffffff",
+											"opacity": 100
+										}
+									}
+								],
+								"type": "group",
+								"inline_help_text": "",
+								"help_text": "",
+								"default": {}
+							},
+							{
+								"name": "hover",
+								"label": "Hover",
+								"required": false,
+								"locked": false,
+								"children": [
+									{
+										"name": "link_color",
+										"label": "Link color",
+										"required": false,
+										"locked": false,
+										"inline_help_text": "",
+										"help_text": "",
+										"type": "color",
+										"inherited_value": {
+											"property_value_paths": {
+												"color": "theme.colors.secondary.color"
+											}
+										},
+										"default": {
+											"color": "#ffffff",
+											"opacity": 100
+										}
+									}
+								],
+								"type": "group",
+								"inline_help_text": "",
+								"help_text": "",
+								"default": {}
+							},
+							{
+								"name": "focus",
+								"label": "Focus",
+								"required": false,
+								"locked": false,
+								"children": [
+									{
+										"name": "link_color",
+										"label": "Link color",
+										"required": false,
+										"locked": false,
+										"inline_help_text": "",
+										"help_text": "",
+										"type": "color",
+										"inherited_value": {
+											"property_value_paths": {
+												"color": "theme.colors.secondary.color"
+											}
+										},
+										"default": {
+											"color": "#ffffff",
+											"opacity": 100
+										}
+									}
+								],
+								"type": "group",
+								"inline_help_text": "",
+								"help_text": "",
+								"default": {}
+							}
+						],
+						"type": "group",
+						"inline_help_text": "",
+						"help_text": "",
+						"default": {}
+					}
+				],
+				"type": "group",
+				"inline_help_text": "",
+				"help_text": "",
+				"default": {}
+			}
+		],
+		"type": "group",
+		"inline_help_text": "",
+		"help_text": "",
+		"default": {}
+	},
+	{
+		"name": "buttons",
+		"label": "Buttons",
+		"required": false,
+		"locked": false,
+		"children": [
+			{
+				"name": "radius",
+				"label": "Border radius",
+				"required": false,
+				"locked": false,
+				"display": "text",
+				"step": 1,
+				"suffix": "px",
+				"type": "number",
+				"min": null,
+				"max": null,
+				"inline_help_text": "",
+				"help_text": "",
+				"default": "32"
+			},
+			{
+				"name": "transition",
+				"label": "Transition",
+				"required": false,
+				"locked": false,
+				"display": "slider",
+				"step": 0.01,
+				"type": "number",
+				"min": 0,
+				"max": 0.4,
+				"inline_help_text": "",
+				"help_text": "",
+				"default": 0.26
+			},
+			{
+				"name": "primary",
+				"label": "Primary button",
+				"required": false,
+				"locked": false,
+				"children": [
+					{
+						"name": "default",
+						"label": "Default",
+						"required": false,
+						"locked": false,
+						"children": [
+							{
+								"name": "background_color",
+								"label": "Background color",
+								"required": false,
+								"locked": false,
+								"inline_help_text": "",
+								"help_text": "",
+								"type": "color",
+								"inherited_value": {
+									"property_value_paths": {
+										"color": "theme.colors.primary.color"
+									}
+								},
+								"default": {
+									"color": "#ffd60a",
+									"opacity": 100
+								}
+							},
+							{
+								"name": "text_color",
+								"label": "Text color",
+								"required": false,
+								"locked": false,
+								"inline_help_text": "",
+								"help_text": "",
+								"type": "color",
+								"inherited_value": {
+									"property_value_paths": {
+										"color": "theme.colors.common.light.color"
+									}
+								},
+								"default": {
+									"color": "#ffffff",
+									"opacity": 100
+								}
+							},
+							{
+								"name": "border",
+								"label": "Border",
+								"required": false,
+								"locked": false,
+								"inline_help_text": "",
+								"help_text": "",
+								"type": "border",
+								"allow_custom_border_sides": true
+							},
+							{
+								"name": "text_transform",
+								"label": "Text transform",
+								"required": false,
+								"locked": false,
+								"display": "radio",
+								"inline_help_text": "",
+								"help_text": "",
+								"choices": [
+									["", "No transform"],
+									["lowercase", "Lowercase"],
+									["uppercase", "Uppercase"]
+								],
+								"type": "choice",
+								"placeholder": "",
+								"default": ""
+							}
+						],
+						"type": "group",
+						"inline_help_text": "",
+						"help_text": "The styling for default button state",
+						"default": {}
+					},
+					{
+						"name": "hover",
+						"label": "Hover",
+						"required": false,
+						"locked": false,
+						"children": [
+							{
+								"name": "background_color",
+								"label": "Background color",
+								"required": false,
+								"locked": false,
+								"inline_help_text": "",
+								"help_text": "",
+								"type": "color",
+								"inherited_value": {
+									"property_value_paths": {
+										"color": "theme.colors.common.dark.color"
+									}
+								},
+								"default": {
+									"color": "#ffd60a",
+									"opacity": 100
+								}
+							},
+							{
+								"name": "text_color",
+								"label": "Text color",
+								"required": false,
+								"locked": false,
+								"inline_help_text": "",
+								"help_text": "",
+								"type": "color",
+								"inherited_value": {
+									"property_value_paths": {
+										"color": "theme.colors.common.light.color"
+									}
+								},
+								"default": {
+									"color": "#ffffff",
+									"opacity": 100
+								}
+							},
+							{
+								"name": "border",
+								"label": "Border",
+								"required": false,
+								"locked": false,
+								"inline_help_text": "",
+								"help_text": "",
+								"type": "border",
+								"allow_custom_border_sides": true
+							},
+							{
+								"name": "text_transform",
+								"label": "Text transform",
+								"required": false,
+								"locked": false,
+								"display": "radio",
+								"inline_help_text": "",
+								"help_text": "",
+								"choices": [
+									["", "No transform"],
+									["lowercase", "Lowercase"],
+									["uppercase", "Uppercase"]
+								],
+								"type": "choice",
+								"placeholder": "",
+								"default": ""
+							}
+						],
+						"type": "group",
+						"inline_help_text": "",
+						"help_text": "The styling for hover button state",
+						"default": {}
+					},
+					{
+						"name": "focus",
+						"label": "Focus",
+						"required": false,
+						"locked": false,
+						"children": [
+							{
+								"name": "background_color",
+								"label": "Background color",
+								"required": false,
+								"locked": false,
+								"inline_help_text": "",
+								"help_text": "",
+								"type": "color",
+								"inherited_value": {
+									"property_value_paths": {
+										"color": "theme.colors.secondary.color"
+									}
+								},
+								"default": {
+									"color": "#ffd60a",
+									"opacity": 100
+								}
+							},
+							{
+								"name": "text_color",
+								"label": "Text color",
+								"required": false,
+								"locked": false,
+								"inline_help_text": "",
+								"help_text": "",
+								"type": "color",
+								"inherited_value": {
+									"property_value_paths": {
+										"color": "theme.colors.common.dark.color"
+									}
+								},
+								"default": {
+									"color": "#ffffff",
+									"opacity": 100
+								}
+							},
+							{
+								"name": "border",
+								"label": "Border",
+								"required": false,
+								"locked": false,
+								"inline_help_text": "",
+								"help_text": "",
+								"type": "border",
+								"allow_custom_border_sides": true,
+								"inherited_value": {
+									"property_value_paths": {
+										"top.color": "theme.colors.common.dark.color",
+										"right.color": "theme.colors.common.dark.color",
+										"bottom.color": "theme.colors.common.dark.color",
+										"left.color": "theme.colors.common.dark.color"
+									}
+								},
+								"default": {
+									"top": {
+										"width": {
+											"value": 2,
+											"units": "px"
+										},
+										"opacity": 100,
+										"style": "solid",
+										"color": "#516747"
+									},
+									"right": {
+										"width": {
+											"value": 2,
+											"units": "px"
+										},
+										"opacity": 100,
+										"style": "solid",
+										"color": "#516747"
+									},
+									"bottom": {
+										"width": {
+											"value": 2,
+											"units": "px"
+										},
+										"opacity": 100,
+										"style": "solid",
+										"color": "#516747"
+									},
+									"left": {
+										"width": {
+											"value": 2,
+											"units": "px"
+										},
+										"opacity": 100,
+										"style": "solid",
+										"color": "#516747"
+									}
+								}
+							},
+							{
+								"name": "text_transform",
+								"label": "Text transform",
+								"required": false,
+								"locked": false,
+								"display": "radio",
+								"inline_help_text": "",
+								"help_text": "",
+								"choices": [
+									["", "No transform"],
+									["lowercase", "Lowercase"],
+									["uppercase", "Uppercase"]
+								],
+								"type": "choice",
+								"placeholder": "",
+								"default": ""
+							}
+						],
+						"type": "group",
+						"inline_help_text": "",
+						"help_text": "The styling for focus button state",
+						"default": {}
+					},
+					{
+						"name": "disabled",
+						"label": "Disabled",
+						"required": false,
+						"locked": false,
+						"children": [
+							{
+								"name": "background_color",
+								"label": "Background color",
+								"required": false,
+								"locked": false,
+								"inline_help_text": "",
+								"help_text": "",
+								"type": "color",
+								"default": {
+									"color": "#c3c3c3",
+									"opacity": 100
+								}
+							},
+							{
+								"name": "text_color",
+								"label": "Text color",
+								"required": false,
+								"locked": false,
+								"inline_help_text": "",
+								"help_text": "",
+								"type": "color",
+								"default": {
+									"color": "#868686",
+									"opacity": 100
+								}
+							},
+							{
+								"name": "border",
+								"label": "Border",
+								"required": false,
+								"locked": false,
+								"inline_help_text": "",
+								"help_text": "",
+								"type": "border",
+								"allow_custom_border_sides": true,
+								"default": {
+									"top": {
+										"width": {
+											"value": 2,
+											"units": "px"
+										},
+										"opacity": 100,
+										"style": "solid",
+										"color": "#868686"
+									},
+									"right": {
+										"width": {
+											"value": 2,
+											"units": "px"
+										},
+										"opacity": 100,
+										"style": "solid",
+										"color": "#868686"
+									},
+									"bottom": {
+										"width": {
+											"value": 2,
+											"units": "px"
+										},
+										"opacity": 100,
+										"style": "solid",
+										"color": "#868686"
+									},
+									"left": {
+										"width": {
+											"value": 2,
+											"units": "px"
+										},
+										"opacity": 100,
+										"style": "solid",
+										"color": "#868686"
+									}
+								}
+							},
+							{
+								"name": "text_transform",
+								"label": "Text transform",
+								"required": false,
+								"locked": false,
+								"display": "radio",
+								"inline_help_text": "",
+								"help_text": "",
+								"choices": [
+									["", "No transform"],
+									["lowercase", "Lowercase"],
+									["uppercase", "Uppercase"]
+								],
+								"type": "choice",
+								"placeholder": "",
+								"default": ""
+							}
+						],
+						"type": "group",
+						"inline_help_text": "",
+						"help_text": "The styling for disabled button state",
+						"default": {}
+					}
+				],
+				"type": "group",
+				"inline_help_text": "",
+				"help_text": "",
+				"default": {}
+			}
+		],
+		"type": "group",
+		"inline_help_text": "",
+		"help_text": "",
+		"default": {}
+	},
+	{
+		"name": "forms",
+		"label": "Forms",
+		"required": false,
+		"locked": false,
+		"children": [
+			{
+				"name": "general_settings",
+				"label": "General settings",
+				"required": false,
+				"locked": false,
+				"children": [
+					{
+						"name": "transition",
+						"label": "Transition",
+						"required": false,
+						"locked": false,
+						"display": "slider",
+						"step": 0.05,
+						"type": "number",
+						"min": 0,
+						"max": 1,
+						"suffix": "s",
+						"inline_help_text": "Transition time for all form elements except button(s)",
+						"help_text": "",
+						"default": "0.2"
+					}
+				],
+				"type": "group",
+				"inline_help_text": "Put the settings here that should be applied to all forms regardless the state. Like border radius, transitions...",
+				"help_text": "",
+				"default": {}
+			},
+			{
+				"name": "inputs",
+				"label": "Input fields",
+				"required": false,
+				"locked": false,
+				"children": [
+					{
+						"name": "padding",
+						"label": "Padding",
+						"required": false,
+						"locked": false,
+						"type": "spacing",
+						"inline_help_text": "",
+						"help_text": "This padding is applied to all text inputs and defines the size of them",
+						"visibility": {
+							"hidden_subfields": {
+								"margin": true
+							}
+						},
+						"default": {
+							"padding": {
+								"top": {
+									"value": "1",
+									"units": "rem"
+								},
+								"bottom": {
+									"value": "1",
+									"units": "rem"
+								},
+								"left": {
+									"value": "1.5",
+									"units": "rem"
+								},
+								"right": {
+									"value": "1.5",
+									"units": "rem"
+								}
+							}
+						}
+					},
+					{
+						"name": "label_size",
+						"label": "Label font size",
+						"required": false,
+						"locked": false,
+						"display": "slider",
+						"step": 0.125,
+						"suffix": "rem",
+						"type": "number",
+						"min": 0.625,
+						"max": 1,
+						"inline_help_text": "",
+						"help_text": "",
+						"default": "1"
+					},
+					{
+						"name": "input_size",
+						"label": "Input font size",
+						"required": false,
+						"locked": false,
+						"display": "slider",
+						"step": 0.125,
+						"suffix": "rem",
+						"type": "number",
+						"min": 0.625,
+						"max": 1,
+						"inline_help_text": "",
+						"help_text": "",
+						"default": "1"
+					}
+				],
+				"type": "group",
+				"inline_help_text": "",
+				"help_text": "",
+				"default": {}
+			}
+		],
+		"type": "group",
+		"inline_help_text": "",
+		"help_text": "",
+		"default": {}
+	},
+	{
+		"name": "modules",
+		"label": "Modules",
+		"required": false,
+		"locked": false,
+		"children": [
+			{
+				"name": "cards",
+				"label": "Cards",
+				"required": false,
+				"locked": false,
+				"children": [
+					{
+						"name": "border_radius",
+						"label": "Border radius",
+						"required": false,
+						"locked": false,
+						"display": "text",
+						"step": 1,
+						"suffix": "px",
+						"type": "number",
+						"min": null,
+						"max": null,
+						"inline_help_text": "",
+						"help_text": "",
+						"default": "16"
+					}
+				],
+				"type": "group",
+				"inline_help_text": "",
+				"help_text": "",
+				"default": {}
+			}
+		],
+		"type": "group",
+		"inline_help_text": "This group is only for demo purposes. Adapt it to your requirements",
+		"help_text": "",
+		"default": {}
+	},
+	{
 		"name": "advanced",
 		"label": "Advanced settings",
 		"required": false,
@@ -293,6 +1446,26 @@
 						}
 					}
 				}
+			},
+			{
+				"name": "icon_style",
+				"label": "Icon style",
+				"required": false,
+				"locked": false,
+				"display": "select",
+				"inline_help_text": "To see all icon styles visit the <a href=\"https://phosphoricons.com\" target=\"_blank\">Phosphor icons website</a>",
+				"help_text": "",
+				"choices": [
+					["-thin", "Thin"],
+					["-light", "Light"],
+					["", "Regular"],
+					["-bold", "Bold"],
+					["-fill", "Fill"],
+					["-duotone", "Doutone"]
+				],
+				"type": "choice",
+				"placeholder": "",
+				"default": ""
 			}
 		],
 		"type": "group",
